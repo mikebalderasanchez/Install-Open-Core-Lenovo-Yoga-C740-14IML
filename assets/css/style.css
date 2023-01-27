@@ -43,6 +43,26 @@ Respaldo
     --header-box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
 }
 
+/* Dark Mode and Light Mode */
+
+[tema="dark"]{
+    --background-color: #000000;
+    --background-secondary-color: #000408;
+    --text-primary: #f0f0f6;
+    --text-secondary: #f3f3fb;
+}
+
+[tema="ligth"]{
+    --background-color: #ffffff;
+    --background-secondary-color: #F0F4F8;
+    --text-primary: #303036;
+    --text-secondary: #63636b;
+}
+
+.cmdi{
+    text-align: center;
+}
+
 /* === CSS Table Of Content
 
 1. Content
