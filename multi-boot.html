@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
 
     <meta charset="utf-8">
 
-    <title>PathSoft - #1 The Fastest HTML5 Template</title>
+    <title>Install Open Core Lenovo Yoga C740-14IML</title>
 
     <meta name="description" content="Description">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-        
-    <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon"> 
+
+	<script>
+		const userTheme = localStorage.getItem("theme");
+		const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+		if(userTheme === "dark" || (!userTheme && darkQuery.matches)){
+			setTheme("dark");
+		}
+
+		darkQuery.addEventListener("change", function(e){
+			if(!localStorage.getItem("theme"))
+				setTheme(e.matches ? "dark" : "light");
+		});
+
+		function setTheme(newTheme){
+			document.documentElement.setAttribute("data-theme", newTheme);
+		}
+	</script>
+
+	<script defer src="assets/js/colorbtn.js"></script>
+
+    <link rel="icon" href="assets/img/favicon/light.png" type="image/x-icon"> 
 
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -83,9 +103,9 @@
         <div class="container">
             <div class="row flex-nowrap align-items-center justify-content-between">
                 <div class="col-auto header-fixed-col logo-wrapper">
-                    <a href="index.html" class="logo" title="">
-                        <img src="" width="115" height="36" alt="">
-                    </a>
+                    <a href="index.html" class="logo" title="MATECH">
+						<img class="hlogo" src="assets/img/favicon/light.png" width="115" height="36" alt="PathSoft">
+					</a>
                 </div>
                 <div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
                     <div class="row flex-nowrap align-items-center justify-content-end">
@@ -118,31 +138,13 @@
                 <span>Contacto</span>
             </a>
         </li>
-		<li>
-			<a>
-				<div id="id-moon">
-					<i id="moon" class="fas fa-moon"></i>
-				</div>
-				<div id="id-sun">
-					<i id="sun" class="fas "></i>
-				</div>
-				<script>
-					var dark = document.getElementById('moon');
-					var light = document.getElementById('sun');
-					document.getElementById('id-moon').addEventListener('click', function(){
-						dark.classList.remove('fa-moon');
-						light.classList.add('fa-sun');
-						document.documentElement.setAttribute('tema', 'dark');
-					})
-					document.getElementById('id-sun').addEventListener('click', function(){
-						light.classList.remove('fa-sun');
-						dark.classList.add('fa-moon');
-						document.documentElement.setAttribute('tema', 'light');
-					})
-				</script>
-			</a>
-		</li>
     </ul>
+	<button class="dark-btn">
+		<i class="fas fa-moon"></i>
+	</button>
+	<button class="light-btn">
+		<i class="fas fa-sun"></i>
+	</button>
 </nav><!-- End main menu -->
                         </div>
                     </div>
@@ -182,92 +184,109 @@
 					<div class="row items">
 						<header class="col-12">
 							<div class="section-heading heading-center">
-								<div class="section-subheading">Areas what we serv</div>
-								<h1>Our Services</h1>
+								<div class="section-subheading">Multi-Boot</div>
+								<h1>Windows</h1>
+							</div>
+							<center><h4>Descargas</h4></center>
+							<div class="accordion">
+								<div class="row gutters-default">
+									<div class="col-lg-6 col-12">
+										<ul class="accordion-list">
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">Windows 10</div>
+												<div class="accordion-content content">
+													<a href="https://www.microsoft.com/software-download/windows10" target="_blank">Descarga aquí</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="col-lg-6 col-12">
+										<ul class="accordion-list">
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">Windows 11</div>
+												<div class="accordion-content content">
+													<a href="https://www.microsoft.com/software-download/windows11" target="_blank">Descarga aquí</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<br>
+							<center><h4>Instrucciones</h4></center>
+							<div class="tabs tabs-vertical">
+								<ul class="tabs-nav section-bgc">
+									<li class="active">Paso 1</li>
+									<li>Paso 2</li>
+									<li>Paso 3</li>
+									<li>Paso 4</li>
+									<li>Paso 5</li>
+									<li>Paso 6</li>
+									<li>Paso 7</li>
+									<li>Paso 8</li>
+								</ul>
+								<div class="tabs-container">
+									<div class="tabs-item content active">
+										<p>Entrar a macOS</p>
+									</div>
+									<div class="tabs-item content">
+										<p>Agregar una particion en el disco donde instalaras Windows con formato exfat</p>
+									</div>
+									<div class="tabs-item content">
+										<p>Reiniciar y en el menu de Open Core seleccionar Windows</p>
+									</div>
+									<div class="tabs-item content">
+										<p>Entrar a la instalacion de Windows y seleccionar la opción de Personalizada: instalar solo Windows (avanzado)</p>
+										<img class="dvmt" src="https://camo.githubusercontent.com/c8d47c6bc0c59e1f436d873ddc366d1a45b115b550057fc01b564594644ee76a/68747470733a2f2f7777772e736f66747a6f6e652e65732f6170702f75706c6f6164732d736f66747a6f6e652e65732f323032302f30332f41637475616c697a61722d6f2d696e7374616c61722d57696e646f77732d31302d64657364652d6365726f2e6a7067">
+									</div>
+									<div class="tabs-item content">
+										<p>Seleccionar la particion que creaste anteriormente para Windows y eliminarla</p>
+										<img class="dvmt" src="https://camo.githubusercontent.com/85d2a012e0e55be876f4d448ce342bfc71586535bfe9da8b3a5866f797c05dec/68747470733a2f2f7777772e736f66747a6f6e652e65732f6170702f75706c6f6164732d736f66747a6f6e652e65732f323032302f30332f456c656769722d646973636f2d792d63726561722d706172746963696f6e65732d706172612d696e7374616c61722d57696e646f77732d373638783537362e6a7067">
+									</div>
+									<div class="tabs-item content">
+										<p>Salir del instalador</p>
+									</div>
+									<div class="tabs-item content">
+										<p>Presionar "Reparar el equipo"</p>
+									</div>
+									<div class="tabs-item content">
+										<p>Ir al cmd y seguir las siguientes instrucciones</p>
+										<ul>
+											<li>diskpart</li>
+											<li>list disk</li>
+											<li>select disk 0 (remplazar por el numero de disco en el que instalara windows)</li>
+											<li>create partition efi size=100</li>
+											<li>format quick fs=fat32 label="System"</li>
+											<li>assign letter="S"</li>
+											<li>create partition msr size=16</li>
+											<li>create partition primary</li>
+											<li>format quick fs=ntfs label="Windows"</li>
+											<li>assign letter="W"</li>
+											<li>list volume</li>
+											<li>exit</li>
+											<li>Si creo el instalador en Windows o eligio Windows 10</li>
+											<ol>
+												<li>dism /Get-WimInfo /WimFile:D:\sources\install.esd (replace D with USB drive letter)</li>
+												<li>dism /Apply-Image /ImageFile:D:\sources\install.esd /Index:1 /ApplyDir:W:\ (replace D with USB drive letter)</li>
+												<li>bcdboot W:\windows /s S: /f UEFI</li>
+											</ol>
+											<li>Si creo el instalador en macOS o eligio Windows 11</li>
+											<ol>
+												<li>dism /Get-WimInfo /WimFile:D:\Sources\install.wim (replace D with USB drive letter)</li>
+												<li>dism /Apply-Image /ImageFile:D:\Sources\install.wim /Index:1 /ApplyDir:W:\ (replace D with USB drive letter)</li>
+												<li>bcdboot W:\windows /s S: /f UEFI</li>
+											</ol>
+										</ul>
+								</div>
 							</div>
 						</header>
-						<div class="col-12 item">
-							<div class="row items">
-								<div class="col-md-6 col-xl-4 col-12 item">
-									<a href="single-service.html" class="iitem item-style iitem-hover">
-										<div class="iitem-icon">
-											<i class="material-icons material-icons-outlined md-48">corporate_fare</i>
-										</div>
-										<div class="iitem-icon-bg">
-											<i class="material-icons material-icons-outlined">corporate_fare</i>
-										</div>
-										<h2 class="iitem-heading item-heading-large">Corporate Solution</h2>
-										<div class="iitem-desc">We embrace holistic development and support for employees with the aim.</div>
-									</a>
-								</div>
-								<div class="col-md-6 col-xl-4 col-12 item">
-									<a href="single-service.html" class="iitem item-style iitem-hover">
-										<div class="iitem-icon">
-											<i class="material-icons material-icons-outlined md-48">support_agent</i>
-										</div>
-										<div class="iitem-icon-bg">
-											<i class="material-icons material-icons-outlined">support_agent</i>
-										</div>
-										<h2 class="iitem-heading item-heading-large">Call Center Solutions</h2>
-										<div class="iitem-desc">Take advantage of the experiential-learning  built into many programs.</div>
-									</a>
-								</div>
-								<div class="col-md-6 col-xl-4 col-12 item">
-									<a href="single-service.html" class="iitem item-style iitem-hover">
-										<div class="iitem-icon">
-											<i class="material-icons material-icons-outlined md-48">cloud_done</i>
-										</div>
-										<div class="iitem-icon-bg">
-											<i class="material-icons material-icons-outlined">cloud_done</i>
-										</div>
-										<h2 class="iitem-heading item-heading-large">Cloud Development</h2>
-										<div class="iitem-desc">Through a unique combination of engineering, construction and design.</div>
-									</a>
-								</div>
-								<div class="col-md-6 col-xl-4 col-12 item">
-									<a href="single-service.html" class="iitem item-style iitem-hover">
-										<div class="iitem-icon">
-											<i class="material-icons material-icons-outlined md-48">laptop_mac</i>
-										</div>
-										<div class="iitem-icon-bg">
-											<i class="material-icons material-icons-outlined">laptop_mac</i>
-										</div>
-										<h2 class="iitem-heading item-heading-large">IOS/MacOS Apps</h2>
-										<div class="iitem-desc">You can work in labs on and off campus or even spend semesters overseas.</div>
-									</a>
-								</div>
-								<div class="col-md-6 col-xl-4 col-12 item">
-									<a href="single-service.html" class="iitem item-style iitem-hover">
-										<div class="iitem-icon">
-											<i class="material-icons material-icons-outlined md-48">phone_android</i>
-										</div>
-										<div class="iitem-icon-bg">
-											<i class="material-icons material-icons-outlined">phone_android</i>
-										</div>
-										<h2 class="iitem-heading item-heading-large">Android Applications</h2>
-										<div class="iitem-desc">We embrace holistic development and support for employees with the aim.</div>
-									</a>
-								</div>
-								<div class="col-md-6 col-xl-4 col-12 item">
-									<a href="single-service.html" class="iitem item-style iitem-hover">
-										<div class="iitem-icon">
-											<i class="material-icons material-icons-outlined md-48">tv</i>
-										</div>
-										<div class="iitem-icon-bg">
-											<i class="material-icons material-icons-outlined">tv</i>
-										</div>
-										<h2 class="iitem-heading item-heading-large">UI/UX Design</h2>
-										<div class="iitem-desc">Take advantage of the experiential-learning  built into many programs.</div>
-									</a>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 
 		</div>
 
+		<a href="tabs-and-accordions.html">Holis</a>
 <!-- Begin footer -->
 <footer class="footer footer-minimal">
     <div class="footer-main">

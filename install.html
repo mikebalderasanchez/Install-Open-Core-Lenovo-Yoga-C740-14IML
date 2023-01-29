@@ -1,16 +1,36 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en" data-theme="light">
 
 <head>
 
     <meta charset="utf-8">
 
-    <title>PathSoft - #1 The Fastest HTML5 Template</title>
+    <title>Install Open Core Lenovo Yoga C740-14IML</title>
 
-    <meta name="description" content="Description">
+    <meta name="description" content="MATECH">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-        
-    <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon"> 
+
+	<script>
+		const userTheme = localStorage.getItem("theme");
+		const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+		if(userTheme === "dark" || (!userTheme && darkQuery.matches)){
+			setTheme("dark");
+		}
+
+		darkQuery.addEventListener("change", function(e){
+			if(!localStorage.getItem("theme"))
+				setTheme(e.matches ? "dark" : "light");
+		});
+
+		function setTheme(newTheme){
+			document.documentElement.setAttribute("data-theme", newTheme);
+		}
+	</script>
+
+	<script defer src="assets/js/colorbtn.js"></script>
+
+    <link rel="icon" href="assets/img/favicon/light.png" type="image/x-icon"> 
 
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -82,9 +102,9 @@
         <div class="container">
             <div class="row flex-nowrap align-items-center justify-content-between">
                 <div class="col-auto header-fixed-col logo-wrapper">
-                    <a href="index.html" class="logo" title="">
-                        <img src="" width="115" height="36" alt="">
-                    </a>
+                    <a href="index.html" class="logo" title="MATECH">
+						<img class="hlogo" src="assets/img/favicon/light.png" width="115" height="36" alt="PathSoft">
+					</a>
                 </div>
                 <div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
                     <div class="row flex-nowrap align-items-center justify-content-end">
@@ -117,31 +137,13 @@
                 <span>Contacto</span>
             </a>
         </li>
-		<li>
-			<a>
-				<div id="id-moon">
-					<i id="moon" class="fas fa-moon"></i>
-				</div>
-				<div id="id-sun">
-					<i id="sun" class="fas "></i>
-				</div>
-				<script>
-					var dark = document.getElementById('moon');
-					var light = document.getElementById('sun');
-					document.getElementById('id-moon').addEventListener('click', function(){
-						dark.classList.remove('fa-moon');
-						light.classList.add('fa-sun');
-						document.documentElement.setAttribute('tema', 'dark');
-					})
-					document.getElementById('id-sun').addEventListener('click', function(){
-						light.classList.remove('fa-sun');
-						dark.classList.add('fa-moon');
-						document.documentElement.setAttribute('tema', 'light');
-					})
-				</script>
-			</a>
-		</li>
 	</ul>
+	<button class="dark-btn">
+		<i class="fas fa-moon"></i>
+	</button>
+	<button class="light-btn">
+		<i class="fas fa-sun"></i>
+	</button>
 </nav><!-- End main menu -->
                         </div>
                     </div>

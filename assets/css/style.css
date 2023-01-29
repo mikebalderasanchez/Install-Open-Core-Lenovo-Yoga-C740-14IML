@@ -41,22 +41,66 @@ Respaldo
     --el-border-radius-min: 6px;
     --el-box-shadow: 2px 4px 20px 1px rgba(45, 45, 45, 0.13);
     --header-box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
+    --transition: 0.3s ease-in-out;
 }
 
 /* Dark Mode and Light Mode */
 
-[tema="dark"]{
+:root[data-theme="dark"]{
     --background-color: #000000;
-    --background-secondary-color: #000408;
+    --background-secondary-color: #1a1919;
     --text-primary: #f0f0f6;
     --text-secondary: #f3f3fb;
+    --border-color: #737373;
+    --placeholder-color: #6F6F76;
+    color-scheme: dark;
 }
 
-[tema="ligth"]{
+:root[data-theme="light"]{
     --background-color: #ffffff;
-    --background-secondary-color: #F0F4F8;
+    --background-secondary-color: #f3f3f4;
     --text-primary: #303036;
     --text-secondary: #63636b;
+    color-scheme: ligth;
+}
+
+.dark-btn, .light-btn{
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+:root[data-theme="light"] .dark-btn{
+    display: none;
+}
+
+:root[data-theme="dark"] .light-btn{
+    display: none;
+}
+
+/* End Dark Mode and Light Mode */
+
+.fas{
+    font-size: 1.1rem;
+}
+
+
+/*Transicion*/
+
+*{
+    transition: background-color var(--transition);
+}
+
+id-moon{
+    cursor: pointer;
+}
+
+id-sun{
+    cursor: pointer;
 }
 
 .cmdi{
@@ -2918,6 +2962,7 @@ body.mmm-open .mmm {
 .main-mnu-list {
     display: inline-flex;
     margin-left: -1.5rem;
+    margin-right: 1.5rem;
 }
 
 .main-mnu-list.hide {
@@ -3232,9 +3277,9 @@ body.mmm-open .mmm {
 /* 6.3 Footer */
 .footer {
     position: relative;
-    background-color: var(--text-primary);
+    background-color: var(--background-secondary-color);
     width: 100%;
-    color: var(--background-color);
+    color: var(--text-primary);
     font-size: 1rem;
 }
 
@@ -3244,17 +3289,17 @@ body.mmm-open .mmm {
 
 .footer a {
     opacity: 0.8;
-    color: var(--background-color);
+    color: var(--text-primary);
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: var(--background-color);
+    color: var(--accent-color);
     opacity: 1;
 }
 
 .footer a::after {
-    color: var(--background-color);
+    color: var(--accent-color);
 }
 
 .mobile .footer, .tablet .footer {
