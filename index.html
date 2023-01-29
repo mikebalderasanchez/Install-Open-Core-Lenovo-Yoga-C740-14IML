@@ -23,7 +23,7 @@
 	<link rel="preload" href="assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2" crossorigin>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
+	
 </head>
 
 <body>
@@ -59,20 +59,6 @@
 					<div id="mid-sun">
 						<i id="msun" class="fas "></i>
 					</div>
-					<script>
-						var dark = document.getElementById('mmoon');
-						var light = document.getElementById('msun');
-						document.getElementById('mid-moon').addEventListener('click', function(){
-							dark.classList.remove('fa-moon');
-							light.classList.add('fa-sun');
-							document.documentElement.setAttribute('tema', 'dark');
-						})
-						document.getElementById('mid-sun').addEventListener('click', function(){
-							light.classList.remove('fa-sun');
-							dark.classList.add('fa-moon');
-							document.documentElement.setAttribute('tema', 'light');
-						})
-					</script>
 				</a>
 			</li>
         </ul>
@@ -129,15 +115,17 @@
 				<script>
 					var dark = document.getElementById('moon');
 					var light = document.getElementById('sun');
-					document.getElementById('id-moon').addEventListener('click', function(){
+					document.getElementById('id-moon').addEventListener('click', function () {
 						dark.classList.remove('fa-moon');
 						light.classList.add('fa-sun');
 						document.documentElement.setAttribute('tema', 'dark');
+						localStorage.setItem('tema', 'dark');
 					})
-					document.getElementById('id-sun').addEventListener('click', function(){
+					document.getElementById('id-sun').addEventListener('click', function () {
 						light.classList.remove('fa-sun');
 						dark.classList.add('fa-moon');
 						document.documentElement.setAttribute('tema', 'light');
+						localStorage.setItem('tema', 'light');
 					})
 				</script>
 			</a>
