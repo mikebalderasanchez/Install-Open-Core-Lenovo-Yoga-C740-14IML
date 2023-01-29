@@ -72,26 +72,12 @@
             </li>
 			<li>
 				<a>
-					<div id="mid-moon">
-						<i id="mmoon" class="fas fa-moon"></i>
-					</div>
-					<div id="mid-sun">
-						<i id="msun" class="fas "></i>
-					</div>
-					<script>
-						var dark = document.getElementById('mmoon');
-						var light = document.getElementById('msun');
-						document.getElementById('mid-moon').addEventListener('click', function(){
-							dark.classList.remove('fa-moon');
-							light.classList.add('fa-sun');
-							document.documentElement.setAttribute('tema', 'dark');
-						})
-						document.getElementById('mid-sun').addEventListener('click', function(){
-							light.classList.remove('fa-sun');
-							dark.classList.add('fa-moon');
-							document.documentElement.setAttribute('tema', 'light');
-						})
-					</script>
+					<button class="dark-btn">
+						<i class="fas fa-moon"></i>
+					</button>
+					<button class="light-btn">
+						<i class="fas fa-sun"></i>
+					</button>
 				</a>
 			</li>
         </ul>
