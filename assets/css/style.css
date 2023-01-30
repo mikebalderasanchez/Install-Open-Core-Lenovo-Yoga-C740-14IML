@@ -64,7 +64,7 @@ Respaldo
     color-scheme: ligth;
 }
 
-.dark-btn, .light-btn{
+.dbutton, .lbutton, .mdbutton, .mlbutton{
     border: none;
     padding: 0;
     background: none;
@@ -74,11 +74,19 @@ Respaldo
     align-items: center;
 }
 
-:root[data-theme="light"] .dark-btn{
+:root[data-theme="dark"] .lbutton{
     display: none;
 }
 
-:root[data-theme="dark"] .light-btn{
+:root[data-theme="light"] .dbutton{
+    display: none;
+}
+
+:root[data-theme="dark"] .mlbutton{
+    display: none;
+}
+
+:root[data-theme="light"] .mdbutton{
     display: none;
 }
 

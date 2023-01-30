@@ -12,17 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 
     <script>
-		const userTheme = localStorage.getItem("theme");
-		const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+		const lsusertheme = localStorage.getItem("theme");
 
-		if(userTheme === "dark" || (!userTheme && darkQuery.matches)){
+		if(lsusertheme === "dark"){
 			setTheme("dark");
 		}
-
-		darkQuery.addEventListener("change", function(e){
-			if(!localStorage.getItem("theme"))
-				setTheme(e.matches ? "dark" : "light");
-		});
 
 		function setTheme(newTheme){
 			document.documentElement.setAttribute("data-theme", newTheme);
@@ -30,6 +24,7 @@
 	</script>
 
     <script defer src="assets/js/colorbtn.js"></script>
+    <script defer src="assets/js/mcolorbtn.js"></script>
 
     <link rel="icon" href="assets/img/favicon/light.png" type="image/x-icon">
 
@@ -77,12 +72,13 @@
                         <li>
                             <a href="contacto.html">Contacto</a>
                         </li>
+                        <br>
                         <li>
                             <a>
-                                <button class="dark-btn">
+                                <button id="mlight-btn" class="mlbutton">
                                     <i class="fas fa-moon"></i>
                                 </button>
-                                <button class="light-btn">
+                                <button id="mdark-btn" class="mdbutton">
                                     <i class="fas fa-sun"></i>
                                 </button>
                             </a>
@@ -131,12 +127,12 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                            <button class="dark-btn">
-												<i class="fas fa-moon"></i>
-											</button>
-											<button class="light-btn">
-												<i class="fas fa-sun"></i>
-											</button>
+                                            <button id="light-btn" class="lbutton">
+                                                <i class="fas fa-moon"></i>
+                                            </button>
+                                            <button id="dark-btn" class="dbutton">
+                                                <i class="fas fa-sun"></i>
+                                            </button>
                                         </nav><!-- End main menu -->
                                     </div>
                                 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="es" data-theme="light">
 
 <head>
 
@@ -12,17 +12,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 
 	<script>
-		const userTheme = localStorage.getItem("theme");
-		const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+		const lsusertheme = localStorage.getItem("theme");
 
-		if(userTheme === "dark" || (!userTheme && darkQuery.matches)){
+		if(lsusertheme === "dark"){
 			setTheme("dark");
 		}
-
-		darkQuery.addEventListener("change", function(e){
-			if(!localStorage.getItem("theme"))
-				setTheme(e.matches ? "dark" : "light");
-		});
 
 		function setTheme(newTheme){
 			document.documentElement.setAttribute("data-theme", newTheme);
@@ -30,23 +24,19 @@
 	</script>
 
 	<script defer src="assets/js/colorbtn.js"></script>
+	<script defer src="assets/js/mcolorbtn.js"></script>
 
 	<link rel="icon" href="assets/img/favicon/light.png" type="image/x-icon">
 
 	<link rel="stylesheet" href="assets/css/bootstrap-grid.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="preload" href="assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2" as="font"
-		type="font/woff2" crossorigin>
-	<link rel="preload" href="assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2" as="font"
-		type="font/woff2" crossorigin>
-	<link rel="preload" href="assets/fonts/montserrat-v25-latin/montserrat-v25-latin-700.woff2" as="font"
-		type="font/woff2" crossorigin>
-	<link rel="preload" href="assets/fonts/montserrat-v25-latin/montserrat-v25-latin-600.woff2" as="font"
-		type="font/woff2" crossorigin>
 
+	<link rel="preload" href="assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/montserrat-v25-latin/montserrat-v25-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="assets/fonts/montserrat-v25-latin/montserrat-v25-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="assets/fonts/material-icons/material-icons.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2"
-		crossorigin>
+	<link rel="preload" href="assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2" crossorigin>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 	
@@ -80,16 +70,15 @@
 						<br>
 						<li>
 							<a>
-								<button class="dark-btn">
+								<button id="mlight-btn" class="mlbutton">
 									<i class="fas fa-moon"></i>
 								</button>
-								<button class="light-btn">
+								<button id="mdark-btn" class="mdbutton">
 									<i class="fas fa-sun"></i>
 								</button>
 							</a>
 						</li>
 					</ul>
-					
 				</div>
 			</nav><!-- End mobile main menu -->
 			<header class="header header-minimal">
@@ -98,7 +87,7 @@
 						<div class="row flex-nowrap align-items-center justify-content-between">
 							<div class="col-auto header-fixed-col logo-wrapper">
 								<a href="index.html" class="logo" title="MATECH">
-                                    <img class="hlogo" src="assets/img/favicon/light.png" width="115" height="36" alt="PathSoft">
+                                    <img id="hlogo" class="hlogo" src="assets/img/favicon/light.png" width="115" height="36" alt="PathSoft">
                                 </a>
 							</div>
 							<div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
@@ -133,11 +122,11 @@
 													</a>
 												</li>
 											</ul>
-											<button class="dark-btn">
-												<i id="moon" class="fas fa-moon"></i>
+											<button id="light-btn" class="lbutton">
+												<i class="fas fa-moon"></i>
 											</button>
-											<button class="light-btn">
-												<i id="sun" class="fas fa-sun"></i>
+											<button id="dark-btn" class="dbutton">
+												<i class="fas fa-sun"></i>
 											</button>
 										</nav><!-- End main menu -->
 									</div>
@@ -176,7 +165,7 @@
 											<svgclass="btn-icon-right" viewBox="0 0 13 9" width="13" height="9">
 												<use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
 										</a>
-										<a href="contacts.html" class="btn btn-border btn-with-icon btn-small ripple">
+										<a href="contacto.html" class="btn btn-border btn-with-icon btn-small ripple">
 											<span style="color: white;">Contacto</span>
 											<svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9">
 												<use xlink:href="assets/img/sprite.svg#arrow-right"></use>
@@ -277,10 +266,10 @@
 						<div class="col-lg-4 col-md-12 col-12 item">
 							<a href="#!" class="iitem item-style">
 								<div class="iitem-icon">
-									<i class="material-icons material-icons-outlined md-48">settigns_ethernet</i>
+									<i class="material-icons material-icons-outlined md-48">cable</i>
 								</div>
 								<div class="iitem-icon-bg">
-									<i class="material-icons material-icons-outlined">settigns_ethernet</i>
+									<i class="material-icons material-icons-outlined">cable</i>
 								</div>
 								<h3 class="iitem-heading item-heading-large">Ethernet</h3>
 								<div class="iitem-desc">Realtek USB GbE Family Controller</div>
