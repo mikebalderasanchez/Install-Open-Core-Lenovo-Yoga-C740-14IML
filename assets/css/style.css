@@ -103,11 +103,7 @@ Respaldo
     transition: background-color var(--transition);
 }
 
-id-moon{
-    cursor: pointer;
-}
-
-id-sun{
+.dark-btn, .light-btn{
     cursor: pointer;
 }
 
@@ -119,6 +115,8 @@ id-sun{
     width: 30rem;
     height: 18rem;
 }
+
+
 
 /* === CSS Table Of Content
 
@@ -1513,6 +1511,28 @@ textarea {
     width: 1rem;
 }
 
+.awesome-icons{
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+.awesome-icons.md-22 {
+    font-size: 1.375rem;
+    width: 1.375rem;
+    height: 1.375rem;
+}
+
 .material-icons.material-icons-outlined {
     font-family: 'Material Icons Outlined';
 }
@@ -2667,6 +2687,11 @@ textarea {
 }
 
 .contact-list li .material-icons {
+    margin-right: 0.625rem;
+    color: var(--accent-color);
+}
+
+.contact-list li .awesome-icons {
     margin-right: 0.625rem;
     color: var(--accent-color);
 }

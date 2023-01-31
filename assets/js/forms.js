@@ -47,8 +47,8 @@
 
                 $.ajax({
                     type: "POST",
-                    url: ajaxurl,
-                    data: th.serialize()
+                    url: "https://formspree.io/f/xpzeqlra",
+                    data: new FormData(event.target)
                 }).done(function() {
 
                     //customAlert(text, duration, alertInfo) info = "success" || "danger" || "warning" || "default"
